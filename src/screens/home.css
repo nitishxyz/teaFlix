@@ -1,0 +1,18 @@
+.con {
+    flex:1;
+    padding-top: 73px;
+    padding-bottom: 38px;
+    width: 100vw;
+    flex-direction: column;
+    background-color: #282c34;
+    /* background-color: rgb(239,240,241); */
+    background-color: #222;
+    color: #fff;
+}
+
+.midCon {
+    display: block;
+    overflow-y: auto;
+    min-height: 0px;
+    flex-direction: column;
+}

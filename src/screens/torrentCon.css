@@ -1,0 +1,141 @@
+.conTor {
+  flex:1;
+  flex-direction: column;
+  background-color: #555;
+  position: relative;
+}
+
+.backgroundImage {
+  flex:1;
+  top:0;
+  left: 0;
+  bottom:0;
+  right: 0;
+  position: absolute;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.torrentCon {
+  width: 100%;
+  min-height: 183px;
+  padding:9px;
+  position: relative;
+  min-width: 1000px;
+}
+
+.torrentInfoFull {
+  position: absolute;
+  padding:9px;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  background-color: transparent;
+}
+
+.torrentInfo {
+  flex:1;
+  flex-direction: column;
+  padding:9px;
+  padding-top: 0px;
+  padding-left: 12px;
+}
+.torrentImgCon {
+  display: inline-block;
+  min-width: 72px;
+  max-width: 110px;
+  padding: 0px;
+  /* background-color: #282c34; */
+  background-color: rgb(194,51,41);
+  overflow: hidden;
+  cursor: pointer;
+  object-fit: scale-down;
+  -webkit-box-shadow: 0px 3px 23px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 23px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 23px 1px rgba(0,0,0,0.75);
+}
+.torrentImg {
+  display: inline-block;
+  height: 100%;
+  z-index: +3;
+}
+
+Checkbox {
+  margin: 0;
+  padding:0
+}
+
+.torrentName {
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 15px;
+}
+
+.torrentMeta {
+  flex-direction: row;
+  font-family: Gill Sans / Gill Sans MT, sans-serif;
+  text-shadow: 0px 3px 20px rgba(0,0,0,0.75);
+}
+
+.torrentYear {
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.torrentDot {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: -13px;
+  padding-left: 6px;
+  padding-right: 6px;
+  vertical-align: middle;
+}
+
+.torrentSeason {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.torrentStars {
+  font-weight: bold;
+}
+.starVal {
+  padding-left: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.torrentProg {
+  font-size: 14px;
+  align-items: center;
+}
+
+.progVal {
+  padding-left: 6px;
+}
+
+.torrentBot {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  vertical-align: middle;
+}
+
+.filesCon {
+  display: block;
+    overflow-y: auto;
+    min-height: 0px;
+    flex-direction: column;
+    z-index: 3;
+}

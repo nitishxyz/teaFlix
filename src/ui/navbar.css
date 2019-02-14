@@ -1,0 +1,175 @@
+.navbar {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    z-index: 3;
+    background-color: #111;
+    padding-right: 12px;
+    align-items: center;
+    flex-direction: column;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+    /* background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%); */
+    /* background-blend-mode: multiply; */
+    /* red = 235,93,86, dark = 129,30,24 */
+    /* yellow =  247,190,51, dark = 153,88,29*/
+    /* green = 108,208,69, dark = 50,101,4 */
+}
+.navbarIn {
+    width: 100%;
+}
+.navLeft {
+    width: 80px;
+}
+.stopLights {
+    padding-left: 12px;
+    padding-right: 12px;
+    align-items: center;
+    height: 38px;
+}
+
+.stopLight{
+    display: flex;
+    background-color: transparent;
+    border: none;
+    width: 13px;
+    height: 13px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    outline: none;
+    font-weight: 800;
+    display: hidden;
+    color: transparent;
+}
+
+/* .redL {
+    background-color: rgb(235,93,86);
+    color: rgb(235,93,86);
+} */
+
+.redL {
+    background-color: #eb5d56;
+    color: rgb(129,30,24);
+}
+
+.redL:focus {
+    background-color: #cd2118;
+}
+
+/* .yellowL {
+    background-color: rgb(247,190,51);
+    color: rgb(247,190,51);
+} */
+.yellowL {
+    background-color: #f7be33;
+    color: rgb(153,88,29);
+}
+
+.yellowL:focus {
+    background-color: #dca009;
+}
+
+/* .greenL {
+    background-color: rgb(108,208,69);
+    color: rgb(108,208,69);
+} */
+
+.greenL{
+    background-color: #6cd045;
+    color: rgb(50,101,4);
+}
+
+.greenL:focus {
+ background-color: #4ba329;
+}
+
+.btwLights {
+    width: 5px
+}
+
+.addTorrent {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    color: rgba(255,255,255,0.7);
+    overflow: hidden;
+}
+.addTorrent:hover {
+    color: #fff;
+}
+.torrentPicker {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: +4;
+}
+.appName {
+  color: rgba(239,240,241,1);
+  font-weight: bold;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+input {
+    display: flex
+}
+
+.navMiddle {
+    flex:1;
+    height: 38px;
+    align-items: center;
+    -webkit-app-region:drag;
+    justify-content: center;
+}
+.navRight {
+    width: 80px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.magnetIn {
+    width: 100%;
+}
+.magnetInput {
+    flex:1;
+    padding: 8px;
+    padding-left: 15px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color:  rgba(239,240,241,1);
+    background-color: #111;
+    border:none
+}
+.magSub {
+    background-color: transparent;
+    border: none;
+    color: rgba(255,255,255,0.7);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.magSub:hover {
+    color: rgba(255,255,255,1);
+}
+
+.magSubDiv {
+    background-color: transparent;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}

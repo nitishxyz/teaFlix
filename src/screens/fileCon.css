@@ -1,0 +1,30 @@
+.fileCon {
+  width: 100%;
+  padding-left:9px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+}
+
+.ePoster {
+  display: block;
+  height: 80px;
+  -webkit-box-shadow: 0px 3px 23px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 23px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 23px 1px rgba(0,0,0,0.75);
+}
+
+.fileInfo {
+  flex:1;
+  flex-direction: column;
+  padding:6px;
+  padding-left: 10px;
+}
+.fileName {
+  font-weight: 500;
+}
+
+.fileDesc {
+  padding:4px;
+  font-size: 13.5px;
+}

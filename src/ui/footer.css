@@ -1,0 +1,50 @@
+.footer {
+  position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+    z-index: 33;
+    height: 38px;
+    background-color: #111;
+    padding-left: 12px;
+    padding-right: 12px;
+    align-items: center;
+    -webkit-app-region:drag;
+}
+
+.footLeft {
+  flex:1;
+}
+.footRight {
+  flex:1;
+  justify-content: flex-end;
+}
+.searchIcon {
+  color: rgba(239,240,241);
+}
+.searchIcon:hover {
+  color: #fff;
+}
+.searchBar {
+  align-items: center;
+  padding-left: 10px;
+  border-radius: 5%;
+  border: 0.5px solid rgba(255,255,255,0.7);
+}
+.searchBar:hover {
+  border: 0.5px solid rgba(255,255,255,1)
+}
+.searchIn {
+  display: flex;
+  background-color: transparent;
+  font-size: 14.5px;
+  padding-top: 3px;
+  padding-bottom:5px;
+  padding-left: 10px;
+  padding-right: 20px;
+  border: none;
+  vertical-align: middle;
+  align-items: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+}
