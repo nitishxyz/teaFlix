@@ -1,5 +1,5 @@
 # teaFlix (BETA)
-a fully open-source, electron-react desktop client for webtorrent
+A fully open-source, electron-react desktop client for webtorrent, includes auto-metdata-retriever for movies as well as TV Shows.
 
 
 
