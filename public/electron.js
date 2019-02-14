@@ -39,6 +39,8 @@ function createWindow() {
     submenu: [
       { label: "About torrentOn", selector: "orderFrontStandardAboutPanel:" },
       { type: "separator" },
+      { label: "Show Developer Tools", accelerator: "CmdOrCtrl+alt+I", click: function() { mainWindow.webContents.openDevTools(); }},
+      { type: "separator" },
       { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
     ]}, {
     label: "Edit",

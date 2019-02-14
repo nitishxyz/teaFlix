@@ -88,7 +88,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log(storeData);
+    // console.log(storeData);
     if(storeData) {
       let torrents = JSON.parse(storeData);
     this.setState({torrents: torrents});
