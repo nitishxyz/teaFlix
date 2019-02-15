@@ -35,3 +35,6 @@ To
 1. run `npm run dist`
 
 Instructions for linux and windows will be added soon.
+
+## Beta download for macOS (binary):
+https://github.com/nitnk9/teaFlix/releases/tag/v0.1-beta
