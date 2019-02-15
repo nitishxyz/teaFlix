@@ -266,6 +266,10 @@ _setupMetaData = (torrent, index) => {
   
 }
 
+_appsetState = (torrents) => {
+  this.setState({torrents});
+}
+
   render() {
     return (
       <div>
@@ -278,7 +282,7 @@ _setupMetaData = (torrent, index) => {
           />
           <Route
             path={"/player/:port/:index"}
-            render={props => <Player {...props} app={this} store={store} placeholder={placeholder} currentTorrent={this.state.currentTorrent}/>}
+            render={props => <Player {...props} apptorrents={this.state.torrents} _appsetState={this._appsetState} store={store} placeholder={placeholder} currentTorrent={this.state.currentTorrent}/>}
             exact
           />
         </div>

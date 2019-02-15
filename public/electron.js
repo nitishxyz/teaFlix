@@ -9,11 +9,13 @@ const url = require("url");
 let mainWindow;
 
 function createWindow() {
+  app.commandLine.appendSwitch('disable-web-security');
   mainWindow = new BrowserWindow({
     frame: false, 
     width: 600, 
     height: 600,
-    icon: path.join(__dirname, './assets/icons/png/512x512.png')
+    icon: path.join(__dirname, './assets/icons/png/512x512.png'),
+    webPreferences: {webSecurity: false}
   });
 
   // mainWindow.webContents.openDevTools();

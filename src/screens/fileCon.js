@@ -68,8 +68,9 @@ class FileCon extends Component {
         year = meta.release_date.split("-")[0];
         let poster = `${appPath}/Local Storage/cached${meta.poster_path}`;
         if(fs.existsSync(poster)) {
-          let poster_img = fs.readFileSync(poster).toString("base64");
-          pic = `data:image/jpeg;base64,${poster_img}`;
+          // let poster_img = fs.readFileSync(poster).toString("base64");
+          // pic = `data:image/jpeg;base64,${poster_img}`;
+          pic = `file://${poster}`
         }
       }
       // film
@@ -78,8 +79,9 @@ class FileCon extends Component {
         if(meta.length !== 0) {
           let poster = `${appPath}/Local Storage/cached${meta.still_path}`;
           if(fs.existsSync(poster)) {
-            let pic_img = fs.readFileSync(poster).toString("base64");
-            pic = `data:image/jpeg;base64,${pic_img}`;
+            // let pic_img = fs.readFileSync(poster).toString("base64");
+            // pic = `data:image/jpeg;base64,${pic_img}`;
+            pic = `file://${poster}`
           }
           title = meta.name;
           desc = meta.overview;
@@ -92,8 +94,9 @@ class FileCon extends Component {
         if(gotFile.length !== 0) {
           let poster = `${appPath}/Local Storage/cached${gotFile.still_path}`;
           if(fs.existsSync(poster)) {
-            let pic_img = fs.readFileSync(poster).toString("base64");
-            pic = `data:image/jpeg;base64,${pic_img}`;
+            // let pic_img = fs.readFileSync(poster).toString("base64");
+            // pic = `data:image/jpeg;base64,${pic_img}`;
+            pic = `file://${poster}`
           }
           title = gotFile.name;
           desc = gotFile.overview;

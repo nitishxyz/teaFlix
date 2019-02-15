@@ -304,14 +304,16 @@ if(this.props.torrent.files) {
       let backdrop = `${appPath}/Local Storage/cached${meta.backdrop_path}`;
       let poster = `${appPath}/Local Storage/cached${meta.poster_path}`;
       if(fs.existsSync(backdrop)) {
-        let back_img = fs.readFileSync(backdrop).toString('base64');
-         backPic = `url(data:image/jpeg;base64,${back_img})`;
+        // let back_img = fs.readFileSync(backdrop).toString('base64');
+        //  backPic = `url(data:image/jpeg;base64,${back_img})`;
+        backPic = `url("file://${backdrop}")`
       } else {
         cacheFile(meta.backdrop_path);
       }
       if(fs.existsSync(poster)) {
         let poster_img = fs.readFileSync(poster).toString('base64');
-         pic = `data:image/jpeg;base64,${poster_img}`;
+        //  pic = `data:image/jpeg;base64,${poster_img}`;
+        pic = `file://${poster}`
       } else {
         cacheFile(meta.poster_path);
       }
@@ -325,14 +327,16 @@ if(this.props.torrent.files) {
         let backdrop = `${appPath}/Local Storage/cached${meta.still_path}`;
       let poster = `${appPath}/Local Storage/cached${meta.poster_path}`;
       if(fs.existsSync(backdrop)) {
-        let back_img = fs.readFileSync(backdrop).toString('base64');
-         backPic = `url(data:image/jpeg;base64,${back_img})`;
+        // let back_img = fs.readFileSync(backdrop).toString('base64');
+        //  backPic = `url(data:image/jpeg;base64,${back_img})`;
+         backPic = `url("file://${backdrop}")`
       } else {
         cacheFile(meta.still_path);
       }
       if(fs.existsSync(poster)) {
-        let poster_img = fs.readFileSync(poster).toString('base64');
-         pic = `data:image/jpeg;base64,${poster_img}`;
+        // let poster_img = fs.readFileSync(poster).toString('base64');
+        //  pic = `data:image/jpeg;base64,${poster_img}`;
+         pic = `file://${poster}`
       } else {
         cacheFile(meta.poster_path);
       }
@@ -344,14 +348,16 @@ if(this.props.torrent.files) {
         let backdrop = `${appPath}/Local Storage/cached${meta.backdrop_path}`;
       let poster = `${appPath}/Local Storage/cached${meta.poster_path}`;
       if(fs.existsSync(backdrop)) {
-        let back_img = fs.readFileSync(backdrop).toString('base64');
-         backPic = `url(data:image/jpeg;base64,${back_img})`;
+        // let back_img = fs.readFileSync(backdrop).toString('base64');
+        //  backPic = `url(data:image/jpeg;base64,${back_img})`;
+        backPic = `url("file://${backdrop}")`
       } else {
         cacheFile(meta.backdrop_path);
       }
       if(fs.existsSync(poster)) {
-        let poster_img = fs.readFileSync(poster).toString('base64');
-         pic = `data:image/jpeg;base64,${poster_img}`;
+        // let poster_img = fs.readFileSync(poster).toString('base64');
+        //  pic = `data:image/jpeg;base64,${poster_img}`;
+        pic = `file://${poster}`
       } else {
         cacheFile(meta.poster_path);
         }

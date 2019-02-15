@@ -324,12 +324,12 @@ class Player extends Component {
         const now = Date.now();
         if(now - this.lSavedpoint > 3000) {
             const { match: { params } } = this.props;
-            let torrents = this.props.app.state.torrents;
+            let torrents = this.props.apptorrents;
             let currentTorrent = this.props.currentTorrent;
         
             torrents[currentTorrent.index].files[this.state.currentIndex].playpoint = point;
 
-            this.props.app.setState({torrents});
+            this.props._appsetState({torrents});
             this.props.store.set(torrents);
             this.lSavedpoint = now;
         }
