@@ -73,6 +73,8 @@ class Player extends Component {
         let curFileIn = findWithAttr(playableFiles, "index", params.index);
         let curFilePlayIn = findWithAttr(this.props.currentTorrent.files, "index", params.index);
 
+        
+
         this.setState({vidSrc: `${params.port}/${params.index}`, 
         currentIndex: params.index,
         port: params.port,
@@ -137,7 +139,7 @@ class Player extends Component {
 
         currentTime = this.playerInit.convertTime(currentTime * 1000);
         this._isMounted && this.setState({currentTime});
-        
+        this._setPlayPoint(prog);
         this.playerInit.seek(prog);
 
 
@@ -345,6 +347,8 @@ class Player extends Component {
 
     _playThisFile = (file, index) => {
         let curFileIn = findWithAttr(this.state.playableFiles, "index", index);
+        let curFilePlayIn = findWithAttr(this.props.currentTorrent.files, "index", index);
+
         this.player.pause();
         this.setState({
             vidSrc: `${this.state.port}/${file.index}`,
@@ -361,7 +365,8 @@ class Player extends Component {
             loaded: false,
             initSeek: false,
             showFiles: false,
-            currentFileIndex: curFileIn
+            currentFileIndex: curFileIn,
+            currentPlaylistIndex: curFilePlayIn
         })
     }
 
