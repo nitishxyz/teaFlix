@@ -113,7 +113,6 @@ class App extends Component {
     "tname": "",
     "torretLength": "",
     "servePort": "",
-    "tname": "",
     "metaData": "",
     "files" : "",
     "ttype" : "",
@@ -180,6 +179,14 @@ _onAddTorrent = (port, torrent, index) => {
     starFiles.push(tfile);
   }
 
+  starFiles.sort(function(a,b) {
+    var x = a.name.toLowerCase();
+    var y = b.name.toLowerCase();
+    return x < y ? -1 : x > y ? 1 : 0;
+});
+
+  // console.log(sortedFiles);
+
     let tAr = {
     "infoHash" : torrent.infoHash,
     "magnetURI": torrent.magnetURI,
@@ -203,9 +210,9 @@ _onAddTorrent = (port, torrent, index) => {
 }
 
 _setupMetaData = (torrent, index) => {
-  // let info = ptt.parse(torrent.name);
-  let info = ptn(torrent.name);
-  console.log(info);
+  let info = ptt.parse(torrent.name);
+  // let info = ptn(torrent.name);
+  // console.log(info);
   if(!info.season) {
     // let qpart = "";
     // if(info.episodeName) {
