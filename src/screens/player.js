@@ -46,7 +46,8 @@ class Player extends Component {
             port: "",
             showFiles: false,
             playableFiles: [],
-            currentFileIndex: -1
+            currentFileIndex: -1,
+            currentPlaylistIndex: 0
         };
         this._isMounted = false;
         this.playerInit = null;
@@ -70,12 +71,14 @@ class Player extends Component {
         });
 
         let curFileIn = findWithAttr(playableFiles, "index", params.index);
+        let curFilePlayIn = findWithAttr(this.props.currentTorrent.files, "index", params.index);
 
         this.setState({vidSrc: `${params.port}/${params.index}`, 
         currentIndex: params.index,
         port: params.port,
         playableFiles,
-        currentFileIndex: curFileIn
+        currentFileIndex: curFileIn,
+        currentPlaylistIndex: curFilePlayIn
         });
     }
 
@@ -118,7 +121,7 @@ class Player extends Component {
         const { match: { params } } = this.props;
         if(!this.state.initSeek){
             let currentTorrent = this.props.currentTorrent;
-        this._seek(currentTorrent.files[this.state.currentIndex].playpoint);
+        this._seek(currentTorrent.files[this.state.currentPlaylistIndex].playpoint);
         
         }
         this._isMounted && this.setState({playing: true, duration, buffering: false, initSeek: true});
@@ -327,7 +330,7 @@ class Player extends Component {
             let torrents = this.props.app.state.torrents;
             let currentTorrent = this.props.currentTorrent;
         
-            torrents[currentTorrent.index].files[this.state.currentIndex].playpoint = point;
+            torrents[currentTorrent.index].files[this.state.currentPlaylistIndex].playpoint = point;
 
             this.props.app.setState({torrents});
             this.props.store.set(torrents);
