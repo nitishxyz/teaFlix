@@ -45,7 +45,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "electron": "^4.0.3",
+    "electron": "^4.0.5",
     "electron-builder": "^20.38.5",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-prettier": "^3.0.1",

@@ -203,7 +203,9 @@ _onAddTorrent = (port, torrent, index) => {
 }
 
 _setupMetaData = (torrent, index) => {
-  let info = ptt.parse(torrent.name);
+  // let info = ptt.parse(torrent.name);
+  let info = ptn(torrent.name);
+  console.log(info);
   if(!info.season) {
     // let qpart = "";
     // if(info.episodeName) {
@@ -282,7 +284,7 @@ _appsetState = (torrents) => {
           />
           <Route
             path={"/player/:port/:index"}
-            render={props => <Player {...props} apptorrents={this.state.torrents} _appsetState={this._appsetState} store={store} placeholder={placeholder} currentTorrent={this.state.currentTorrent}/>}
+            render={props => <Player {...props} app={this} store={store} placeholder={placeholder} currentTorrent={this.state.currentTorrent}/>}
             exact
           />
         </div>

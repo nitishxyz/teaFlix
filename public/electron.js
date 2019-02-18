@@ -32,6 +32,11 @@ function createWindow() {
       })
   );
 
+   mainWindow.webContents.on('crashed', () => {
+    mainWindow.destroy();
+    createWindow();
+  });
+
   mainWindow.on("closed", () => {
     mainWindow = null;
   });
